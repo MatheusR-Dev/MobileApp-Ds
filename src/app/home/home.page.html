@@ -1,12 +1,12 @@
 <ion-content>
   <div class="h-100 d-flex justify-content-center align-items-center">
-    <div class="display-1 fw-bold">
-      0
+    <div class="display-1 fw-bold" [class.text-danger]="sorteado" [class.flip-scale-up-hor]="!sorteado">
+      {{dado}}
     </div>
   </div>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="arrow-forward-circle"></ion-icon>
+    <ion-fab-button (click)="sortear()">
+      <ion-icon name="dice"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
